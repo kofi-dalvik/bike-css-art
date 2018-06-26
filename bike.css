@@ -1,0 +1,378 @@
+/*
+*   Author: Ahmed Dawuda
+*  
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bike {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin: 20px;
+  transition: transform 5s;
+}
+.bike h3 {
+  text-align: center;
+  width: 90%;
+  font-weight: normal;
+}
+.bike .backwheel, .bike .frontwheel {
+  transition: transform 5s;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 8px solid black;
+  position: absolute;
+  top: 115px;
+}
+.bike .backwheel .rim, .bike .frontwheel .rim {
+  height: 93%;
+  width: 93%;
+  border-radius: 100%;
+  border: 4px solid grey;
+  position: absolute;
+}
+.bike .backwheel .rim .center, .bike .frontwheel .rim .center {
+  background: black;
+  height: 20px;
+  width: 20px;
+  border: 3px solid lightgray;
+  border-radius: 100%;
+  position: absolute;
+  top: 43px;
+  right: 42px;
+}
+.bike .backwheel .rim .spoke, .bike .frontwheel .rim .spoke {
+  width: 54px;
+  height: 2px;
+  background: grey;
+  position: absolute;
+  border-left: 1px solid black;
+  border-right: 2px solid black;
+  top: 55px;
+  left: 0px;
+}
+.bike .backwheel .rim .spoke.spoke-1, .bike .frontwheel .rim .spoke.spoke-1 {
+  transform: rotate(18deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-2, .bike .frontwheel .rim .spoke.spoke-2 {
+  transform: rotate(36deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-3, .bike .frontwheel .rim .spoke.spoke-3 {
+  transform: rotate(54deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-4, .bike .frontwheel .rim .spoke.spoke-4 {
+  transform: rotate(72deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-5, .bike .frontwheel .rim .spoke.spoke-5 {
+  transform: rotate(90deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-6, .bike .frontwheel .rim .spoke.spoke-6 {
+  transform: rotate(108deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-7, .bike .frontwheel .rim .spoke.spoke-7 {
+  transform: rotate(126deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-8, .bike .frontwheel .rim .spoke.spoke-8 {
+  transform: rotate(144deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-9, .bike .frontwheel .rim .spoke.spoke-9 {
+  transform: rotate(162deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-10, .bike .frontwheel .rim .spoke.spoke-10 {
+  transform: rotate(180deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-11, .bike .frontwheel .rim .spoke.spoke-11 {
+  transform: rotate(198deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-12, .bike .frontwheel .rim .spoke.spoke-12 {
+  transform: rotate(216deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-13, .bike .frontwheel .rim .spoke.spoke-13 {
+  transform: rotate(234deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-14, .bike .frontwheel .rim .spoke.spoke-14 {
+  transform: rotate(252deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-15, .bike .frontwheel .rim .spoke.spoke-15 {
+  transform: rotate(270deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-16, .bike .frontwheel .rim .spoke.spoke-16 {
+  transform: rotate(288deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-17, .bike .frontwheel .rim .spoke.spoke-17 {
+  transform: rotate(306deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-18, .bike .frontwheel .rim .spoke.spoke-18 {
+  transform: rotate(324deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-19, .bike .frontwheel .rim .spoke.spoke-19 {
+  transform: rotate(342deg);
+  transform-origin: 100% 50%;
+}
+.bike .backwheel .rim .spoke.spoke-20, .bike .frontwheel .rim .spoke.spoke-20 {
+  transform: rotate(360deg);
+  transform-origin: 100% 50%;
+}
+.bike .frontwheel {
+  right: 55px;
+}
+.bike .frame {
+  background: red;
+  height: 5px;
+  border: 1px solid grey;
+  width: 200px;
+  margin: 1px;
+  position: absolute;
+  border-radius: 3px;
+  z-index: 3;
+}
+.bike .frame.steer {
+  position: absolute;
+  top: 82px;
+  right: 132px;
+  z-index: 10;
+  width: 30px;
+  background: grey;
+  transform: rotate(-10deg);
+  transform-origin: 0% 50%;
+}
+.bike .frame.steer .handle {
+  width: 20px;
+  height: 10px;
+  background: #333333;
+  position: absolute;
+  right: -10px;
+  top: -3px;
+  border-radius: 10px;
+  transform: rotate(-20deg);
+}
+.bike .frame.top-frame {
+  position: absolute;
+  top: 100px;
+  width: 130px;
+  right: 155px;
+  transform: rotate(1deg);
+  transform-origin: 100% 50%;
+}
+.bike .frame.front-fork {
+  right: 120px;
+  top: 180px;
+  height: 4px;
+  width: 80px;
+  transform: rotate(65deg);
+  transform-origin: 100% 50%;
+}
+.bike .frame.head-frame {
+  right: 153px;
+  top: 110px;
+  height: 6px;
+  width: 30px;
+  transform: rotate(75deg);
+  transform-origin: 100% 50%;
+}
+.bike .frame.back-fork {
+  left: 40px;
+  top: 190px;
+  height: 5px;
+  width: 110px;
+  transform: rotate(70deg);
+  transform-origin: 100% 50%;
+}
+.bike .frame.seat-stays {
+  left: 64px;
+  top: 180px;
+  height: 4px;
+  width: 95px;
+  transform: rotate(-60deg);
+  transform-origin: 0% 0%;
+}
+.bike .frame.down-tube {
+  left: 150px;
+  top: 190px;
+  height: 4px;
+  width: 125px;
+  transform: rotate(-46deg);
+  transform-origin: 0% 0%;
+}
+.bike .frame.chain-stays {
+  left: 69px;
+  top: 181px;
+  height: 4px;
+  width: 82px;
+  transform: rotate(7deg);
+  transform-origin: 0% 0%;
+}
+.bike .seat {
+  background: #333333;
+  height: 10px;
+  width: 20px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 82px;
+  left: 110px;
+  z-index: 10;
+}
+.bike .seat .body {
+  position: absolute;
+  left: -13px;
+  background: #333333;
+  height: 13px;
+  width: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.bike .paddler {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 4px solid grey;
+  box-sizing: border-box;
+  position: absolute;
+  transition: transform 5s;
+  top: 178px;
+  left: 138px;
+  z-index: 5;
+}
+.bike .paddler .spoke {
+  width: 14px;
+  background: lightgrey;
+  height: 3px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.bike .paddler .spoke.spoke-1 {
+  transform: rotate(60deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .spoke.spoke-2 {
+  transform: rotate(120deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .spoke.spoke-3 {
+  transform: rotate(180deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .spoke.spoke-4 {
+  transform: rotate(240deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .spoke.spoke-5 {
+  transform: rotate(300deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .spoke.spoke-6 {
+  transform: rotate(360deg);
+  transform-origin: 100% 50%;
+}
+.bike .paddler .step-on {
+  background: lightgrey;
+  border: 1px solid grey;
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  top: 9px;
+  border-radius: 3px;
+  left: 13px;
+  z-index: 6;
+  transform: rotate(80deg);
+  transform-origin: 0% 50%;
+}
+.bike .paddler .foot {
+  position: absolute;
+  width: 14px;
+  height: 5px;
+  z-index: 10;
+  background: #4d4d4d;
+  box-shadow: 1px 1px 2px grey;
+  top: 40px;
+  left: 13px;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+}
+.bike .wheel-shadows {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 260px;
+}
+.bike .wheel-shadows .back {
+  height: 2px;
+  width: 130px;
+  background: lightgrey;
+  border-radius: 100%;
+  box-shadow: 1px 1px 7px grey;
+}
+.bike .wheel-shadows .front {
+  height: 2px;
+  width: 130px;
+  background: lightgrey;
+  border-radius: 100%;
+  box-shadow: 1px 1px 7px grey;
+  position: absolute;
+  right: 60px;
+}
+
+.move {
+  transform: translateX(1500px);
+}
+.move .backwheel, .move .frontwheel {
+  transform: rotate(360deg);
+}
+.move .paddler {
+  transform: rotate(360deg);
+}
+
+#moveBike {
+  padding: 10px;
+  background: grey;
+  color: white;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#moveBike:hover {
+  background: grey;
+  box-shadow: 1px 1px 2px lightgrey;
+}
+#moveBike:active {
+  background: lightgrey;
+}
+
+.floor {
+  width: 100%;
+  height: 10px;
+  background: lightgrey;
+  position: relative;
+  top: -23px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px lightgrey;
+  transition: display 0.5s;
+}
+
+/*# sourceMappingURL=bike.css.map */

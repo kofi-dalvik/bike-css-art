@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Bicycle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="bike.css" />
+</head>
+<body>
+    <div class="bike" id="bike">
+        <!-- <h3>Bicycle with pure css, no image</h3> -->
+        <div class="frame front-fork"></div>
+        <div class="frame steer">
+            <div class="handle"></div>
+        </div>
+        <div class="frame top-frame"></div>
+        <div class="frame head-frame"></div>
+        <div class="frame back-fork"></div>
+        <div class="frame seat-stays"></div>
+        <div class="frame chain-stays"></div>
+        <div class="frame down-tube"></div>
+        <div class="paddler">
+            <div class="step-on"></div>
+            <div class="foot"></div>
+            <div class="spoke spoke-1"></div>
+            <div class="spoke spoke-2"></div>
+            <div class="spoke spoke-3"></div>
+            <div class="spoke spoke-4"></div>
+            <div class="spoke spoke-5"></div>
+            <div class="spoke spoke-6"></div>
+        </div>
+        <div class="seat">
+            <div class="body"></div>
+        </div>
+
+        <div class="backwheel">
+            <div class="rim">
+                <div class="center"></div>
+                <div class="spoke spoke-1"></div>
+                <div class="spoke spoke-2"></div>
+                <div class="spoke spoke-3"></div>
+                <div class="spoke spoke-4"></div>
+                <div class="spoke spoke-5"></div>
+                <div class="spoke spoke-6"></div>
+                <div class="spoke spoke-7"></div>
+                <div class="spoke spoke-8"></div>
+                <div class="spoke spoke-9"></div>
+                <div class="spoke spoke-10"></div>
+                <div class="spoke spoke-11"></div>
+                <div class="spoke spoke-12"></div>
+                <div class="spoke spoke-13"></div>
+                <div class="spoke spoke-14"></div>
+                <div class="spoke spoke-15"></div>
+                <div class="spoke spoke-16"></div>
+                <div class="spoke spoke-17"></div>
+                <div class="spoke spoke-18"></div>
+                <div class="spoke spoke-19"></div>
+                <div class="spoke spoke-20"></div>
+            </div>
+        </div>
+        <div class="frontwheel">
+            <div class="rim">
+                <div class="center"></div>
+                <div class="spoke spoke-1"></div>
+                <div class="spoke spoke-2"></div>
+                <div class="spoke spoke-3"></div>
+                <div class="spoke spoke-4"></div>
+                <div class="spoke spoke-5"></div>
+                <div class="spoke spoke-6"></div>
+                <div class="spoke spoke-7"></div>
+                <div class="spoke spoke-8"></div>
+                <div class="spoke spoke-9"></div>
+                <div class="spoke spoke-10"></div>
+                <div class="spoke spoke-11"></div>
+                <div class="spoke spoke-12"></div>
+                <div class="spoke spoke-13"></div>
+                <div class="spoke spoke-14"></div>
+                <div class="spoke spoke-15"></div>
+                <div class="spoke spoke-16"></div>
+                <div class="spoke spoke-17"></div>
+                <div class="spoke spoke-18"></div>
+                <div class="spoke spoke-19"></div>
+                <div class="spoke spoke-20"></div>
+            </div>
+        </div>
+        <!-- <div class="wheel-shadows">
+            <div class="back"></div>
+            <div class="front"></div>
+        </div> -->
+    </div>
+    <div class="floor" id="floor"></div>
+    <button id="moveBike">Move Bike to right</button>
+    <script>
+        var bike = document.getElementById('bike');
+        // console.log(bike.className)
+
+        document.getElementById('moveBike').addEventListener('click', function (event) {
+            // console.log('button clicked')
+
+            if (document.getElementById('bike').className.indexOf('move') == -1) {
+                var newClass = bike.className + ' move'
+                bike.className = newClass;
+                event.target.innerText = 'Move Bike to Left'
+                // setTimeout(function () {
+                //     bike.className = 'bike'
+                // }, 5000)
+            } else {
+                event.target.innerText = 'Move Bike to Right'
+                bike.className = 'bike'
+            }
+        })
+
+        document.getElementsByClassName('frame').addEventListener('click', function (event) {
+            if (document.getElementById('bike').className.indexOf('move') == -1) {
+                var newClass = bike.className + ' move'
+                bike.className = newClass;
+                // event.target.innerText = 'Move Bike to Left'
+                // setTimeout(function () {
+                //     bike.className = 'bike'
+                // }, 5000)
+            } else {
+                // event.target.innerText = 'Move Bike to Right'
+                bike.className = 'bike'
+            }
+        })
+    </script>
+</body>
+</html>
